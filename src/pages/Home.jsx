@@ -8,7 +8,6 @@ const Home = () => {
     const {ingresosAll, egresosAll, total} = AppContext()
   return (
     <>
-    <h1 className={styles.title}>Control de gastos</h1>
     <TotalAmount total={total}/>
     <div className={styles.home}>
     <In ingresosAll={ingresosAll} total={total}/>
