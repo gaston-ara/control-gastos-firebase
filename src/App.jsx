@@ -1,13 +1,13 @@
-import Home from './pages/Home'
 import './App.css'
 import ContextProvider from './context/ContextProvider'
+import AppRouter from './routes/AppRouter'
 
 function App() {
 
   return (
     <div className="App">
       <ContextProvider>
-      <Home/>
+      <AppRouter/>
       </ContextProvider>
     </div>
   )

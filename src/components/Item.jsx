@@ -1,4 +1,5 @@
 import React from 'react'
+import IconDelete from '../icons/IconDelete'
 import styles from '../styles/item.module.css'
 
 const Item = (props) => {
@@ -7,7 +8,7 @@ const Item = (props) => {
         <h3>{props.asunto}</h3>
         <p>${props.monto}</p>
         <span>{props.time}</span>
-        <button type='button' onClick={(e)=>props.delete(e)}>x</button>
+        <button className={styles.btn_item} type='button' onClick={(e)=>props.delete(e)}><IconDelete/></button>
     </div>
   )
 }

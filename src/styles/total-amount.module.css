@@ -1,0 +1,16 @@
+.amount_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+.amount_container h2{
+    margin: 16px 8px;
+}
+.btn_total_amount{
+    padding: 8px;
+    height: fit-content;
+    line-height: 0;
+    background-color: transparent;
+    border: none;
+}

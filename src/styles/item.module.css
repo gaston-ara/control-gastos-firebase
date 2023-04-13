@@ -5,5 +5,32 @@
     border: 1px solid whitesmoke;
     border-radius: 16px;
     margin: 8px auto;
-    width: 90%;
+    width: 100%;
+    color: rgb(229, 229, 229);
+    font-size: 16px;
+    transition: 0.5s;
+}
+.item h3{
+    font-size: 14px;
+    text-align: left;
+    padding: 4px;
+    font-weight: 400;
+}
+.item p{
+    font-size: 14px;
+    font-weight: bold;
+}
+.item span{
+    width: 32px;
+    font-size: 12px;
+}
+.btn_item{
+    padding: 8px;
+    height: fit-content;
+    line-height: 0;
+    background-color: transparent;
+    border: none;
+}
+.item:hover{
+    color: white;
 }
