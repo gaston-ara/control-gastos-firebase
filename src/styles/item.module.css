@@ -1,0 +1,9 @@
+.item{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid whitesmoke;
+    border-radius: 16px;
+    margin: 8px auto;
+    width: 90%;
+}

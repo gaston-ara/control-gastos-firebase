@@ -1,10 +1,10 @@
 import React from 'react'
 import Item from './Item'
 import { getTotal } from '../firebase/Firebase'
-import { AppContext } from '../context/ContextProvider'
+import styles from '../styles/list.module.css' 
 
 const List = (props) => {
-    const {saveIngresos, saveEgresos} = AppContext()
+
     const Delete = async (e) => {
         let amountDeleted = e.target.parentNode.children[1].innerText
         let splice = amountDeleted.slice(1)
@@ -15,10 +15,10 @@ const List = (props) => {
          let updateValue = props.operation === "suma"? total.docs[0].data().monto + parsedSplice : total.docs[0].data().monto - parsedSplice;
         await props.updateTotal(idTotal, updateValue)
         await props.toDelete(idToDelete)
-        props.operation === "suma"? await saveEgresos() : await saveIngresos();
+
     }
   return (
-    <div>
+    <div className={styles.list}>
 {props.arrayIn? props.arrayIn.map((doc, index) => {
     return <Item i={index} key={index} id={doc.id} asunto={doc.asunto} monto={doc.monto} time={doc.time} delete={Delete}/>
 }) : <p>Cargando...</p> }
