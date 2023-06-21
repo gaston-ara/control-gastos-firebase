@@ -6,7 +6,7 @@ import styles from '../styles/list.module.css'
 const List = (props) => {
 
     const Delete = async (e) => {
-        let amountDeleted = e.target.parentNode.children[1].innerText
+        let amountDeleted = e.target.parentNode.getElementsByTagName('p')[0].innerHTML;
         let splice = amountDeleted.slice(1)
         let parsedSplice = JSON.parse(splice)
         let idToDelete = e.target.parentNode.id;
