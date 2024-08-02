@@ -4,6 +4,9 @@ import IconEdit from '../icons/IconEdit'
 import { NavLink } from 'react-router-dom'
 
 const TotalAmount = (props) => {
+  const today = new Date();
+  const lastDayOfMonth = new Date(today.getFullYear(), today.getMonth() + 1, 0);
+  const daysLeft = lastDayOfMonth.getDate() - today.getDate();
   return (
     <>
       {props.total ?
@@ -17,7 +20,7 @@ const TotalAmount = (props) => {
             </span>
           </div>
           <span>
-            <p>${Math.floor((props.total[0].monto / 30))} x dia para el mes</p>
+            <p>${Math.floor((props.total[0].monto / daysLeft))} x dia para el mes</p>
           </span>
         </div>
         : <p>...</p>
