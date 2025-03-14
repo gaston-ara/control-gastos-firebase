@@ -12,7 +12,7 @@ const TotalAmount = (props) => {
       {props.total ?
         <div id={props.total[0].id}>
           <div className={styles.amount_container}>
-            <h2>${props.total[0].monto}</h2>
+            <h2>${props.total[0].monto.toFixed(2)}</h2>
             <span>
               <NavLink className={styles.btn_total_amount} to={"/edit-amount"}>
                 <IconEdit />
